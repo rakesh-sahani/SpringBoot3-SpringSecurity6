@@ -1,5 +1,4 @@
-# Spring Boot 3 and Spring Security 6
-Student Records is a web-based service that allows to manage and this project shows you to Frontend and backend.
+# Spring Boot 3 and Spring Security 6 (BoilerPlate Code)
 How to write the code and structed according to best practices standards and also implementing
 
 Spring Boot 3 and Spring Framework 6.0

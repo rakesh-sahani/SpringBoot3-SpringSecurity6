@@ -8,8 +8,10 @@ Spring Boot 3 and Spring Framework 6.0
 * Spring Security 6 with JWT
 * Spring Security Exception Handling
 * Role Based Provisioning
-* User - SignIn, SignUp, SignOut, refreshToken and ChangePassword functionality 
+* User - SignIn, SignUp, SignOut, refreshToken and ChangePassword functionality
 * Custom Exception Handling
 * Spring Profie
 * Swagger or OpenAPI Documentation
 * Lombok
+* Logger formatting
+* Connection Pooling

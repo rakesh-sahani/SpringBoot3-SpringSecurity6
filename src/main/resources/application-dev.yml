@@ -1,0 +1,70 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: SpringBoot3-SpringSecurity6
+  datasource:
+    hikari:
+      connectionTimeout: 2000
+      data-source-properties:
+        cachePrepStmts: true
+        cacheResultSetMetadata: true
+        cacheServerConfiguration: true
+        elideSetAutoCommits: true
+        maintainTimeStats: false
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        rewriteBatchedStatements: true
+        useLocalSessionState: true
+        useServerPrepStmts: true
+      maxLifetime: 1000000
+      maximum-pool-size: 20
+      poolName: spring-boot-hikari-mysql-cp
+      idle-timeout: 10000
+      minimum-idle: 10
+      auto-commit: true
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/spring_security?useSSL=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: root
+    password: root@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: false
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+logging:
+  level:
+    root: info
+    com:
+      tres: trace
+      zaxxer:
+        hikari:
+          HikariConfig: DEBUG
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: metrics
+
+#Swagger Ui
+springdoc:
+  swagger-ui:
+    path: /swagger.html
+    operationsSorter: method
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428123B4B4550645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days

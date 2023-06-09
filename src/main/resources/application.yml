@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: SpringBoot3-SpringSecurity6
+  profiles:
+    active: dev

@@ -3,7 +3,8 @@ Student Records is a web-based service that allows to manage and this project sh
 How to write the code and structed according to best practices standards and also implementing
 
 Spring Boot 3 and Spring Framework 6.0
-## In this Repository covered this
+## In this Repository covered things:
+
 * Spring Boot 3
 * Spring Security 6 with JWT
 * Spring Security Exception Handling

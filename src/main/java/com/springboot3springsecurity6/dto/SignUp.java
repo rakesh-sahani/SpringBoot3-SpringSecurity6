@@ -38,6 +38,5 @@ public class SignUp {
     @NotBlank(message = "Password is mandatory")
     private String password;
 
-    @NotBlank(message = "Role is mandatory")
     private Role role;
 }

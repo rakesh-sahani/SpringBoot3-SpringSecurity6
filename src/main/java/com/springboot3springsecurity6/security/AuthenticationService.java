@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -69,7 +70,7 @@ public class AuthenticationService {
     }
 
     private void revokeAllUserTokens(MasterUserEntity masterUserEntity) {
-        List<TokenEntity> validUserTokens = tokenRepository.findByMasterUserId_IdAndRevokedFalseOrExpiredFalse(masterUserEntity.getId());
+        List<TokenEntity> validUserTokens = tokenRepository.findByMasterUserId_IdAndRevokedFalseOrExpiredFalse(UUID.fromString(masterUserEntity.getId().toString()));
         if (validUserTokens.isEmpty())
             return;
         validUserTokens.forEach(token -> {

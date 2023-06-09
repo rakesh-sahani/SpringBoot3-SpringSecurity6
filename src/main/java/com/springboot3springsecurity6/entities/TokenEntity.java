@@ -26,7 +26,7 @@ import java.util.UUID;
 public class TokenEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID, generator = "uuid2")
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", nullable = false)
     @JdbcTypeCode(SqlTypes.VARCHAR)
     @JsonProperty("id")

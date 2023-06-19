@@ -1,4 +1,4 @@
-package com.tres.security;
+package com.springboot3springsecurity6.security;
 
 
 import lombok.RequiredArgsConstructor;
@@ -22,7 +22,8 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.tres.enums.Role.*;
+import static com.springboot3springsecurity6.enums.Role.ADMIN;
+import static com.springboot3springsecurity6.enums.Role.USER;
 
 @Configuration
 @EnableWebSecurity
@@ -53,11 +54,11 @@ public class SecurityConfiguration {
                                         "/swagger.html",
                                         "/swagger-ui.html",
                                         "/api/v1/sign-up",
+                                        "/api/v1/hi",
                                         "/api/v1/sign-in"
                                 ).permitAll()
                                 .requestMatchers("/api/v1/update-password").authenticated()
                                 .requestMatchers("/api/v1/admin/**").hasRole(ADMIN.name())
-                                .requestMatchers("/api/v1/tpa/**").hasRole(TPA.name())
                                 .requestMatchers("/api/v1/user/**").hasRole(USER.name())
                                 .anyRequest()
                                 .authenticated()
@@ -79,12 +80,10 @@ public class SecurityConfiguration {
         return http.build();
     }
 
-    @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of("*"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS", "HEAD"));
-        configuration.setAllowCredentials(true);
+        configuration.setAllowedMethods(List.of("*"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Requestor-Type"));
         configuration.setExposedHeaders(List.of("X-Get-Header"));
         configuration.setMaxAge(3600L);

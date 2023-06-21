@@ -7,7 +7,7 @@ How to write the code and structed according to best practices standards and als
 
 
 
-Spring Boot 3 and Spring Framework 6.0
+Spring Boot 3.1.0 and Spring Framework 6.0
 ## In this Repository covered things:
 
 * Spring Boot 3.1.0

@@ -1,8 +1,8 @@
-# Spring Boot 3 + Spring Security 6 + JWT
+# Spring Boot 3.1.0 + Spring Security 6 + JWT
 This Project is the boilerplate of the spring security implementation.
 
 
-# Spring Boot 3 and Spring Security 6 (BoilerPlate Code)
+# Spring Boot 3.1.0 and Spring Security 6 (BoilerPlate Code)
 How to write the code and structed according to best practices standards and also implementing
 
 
@@ -10,7 +10,7 @@ How to write the code and structed according to best practices standards and als
 Spring Boot 3 and Spring Framework 6.0
 ## In this Repository covered things:
 
-* Spring Boot 3
+* Spring Boot 3.1.0
 * Spring Security 6 with JWT
 * Spring Security Exception Handling
 * Role Based Provisioning
@@ -26,7 +26,7 @@ Spring Boot 3 and Spring Framework 6.0
 ### Technologies and Framework/Libraries :
 * Java 17
 * MySQL 
-* Spring Boot 3
+* Spring Boot 3.1.0
 * Spring Security 6
 * JWT ( JSON Web Token )
 * Maven
